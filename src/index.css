@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.grey{
+  color: #808588;
+}
+.hint{
+  font-size: 100px;
+}
+
+.num{
+  font-size: 60px;
+}
+
+.img-max {
+  max-width: 50px;
+  width:25%;
+}
+
+.img-active {
+  border-color: black
+}

@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
+import Header from '../header'
+import ImageCode from '../imageCode'
 
 export default class NumToImage extends Component {
    
-    render () {
+    render() {
+        const header = () => {
+            return (
+                <div>                    
+                    <p>Вспоминайте образы соответствующие цифрам.</p>                    
+                </div>
+            )
+        }
         return (
-            <h1>Num to image</h1>
+            <div className="container">
+                <Header text={header()} /> 
+                <ImageCode type='num'/>               
+            </div>
         )
     }
 }

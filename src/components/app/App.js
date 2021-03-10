@@ -28,14 +28,15 @@ export default class App extends Component {
              <div className="btn-toolbar">   
               <Btn url='/code-to-num' label='Буквы в числа'/>
               <Btn url='/num-to-code' label='Числа в буквы'/>
-              <Btn url='/image-to-code' label='Образы в числа'/>
-              <Btn url='/code-to-image' label='Числа в образы'/>
               <Btn url='/list-to-num' label='Числа по трем согласным'/>              
+              <Btn url='/image-to-num' label='Образы в числа'/>
+              <Btn url='/num-to-image' label='Числа в образы'/>
+              
             </div>
             <Route path='/code-to-num' component={CodeToNum} />
-            <Route path='/image-to-num' component={ImageToNum} />
-            <Route path='/list-to-num' exact component={ListToNum} />
             <Route path='/num-to-code' exact component={NumToCode} />
+            <Route path='/list-to-num' exact component={ListToNum} />            
+            <Route path='/image-to-num' component={ImageToNum} />            
             <Route path='/num-to-image' exact component={NumToImage} />
 
           </Router>
