@@ -4,6 +4,7 @@ import React, {
 import Task from '../task';
 import Timer from '../timer'
 import Hint from '../hint'
+import './imageCode.css'
 
 export default class ImageCode extends Component {
 
@@ -60,13 +61,13 @@ export default class ImageCode extends Component {
         
         const data = listData.map((e, index) => {
 
-            if (index === this.state.actual) {                
-                classNames = 'img-thumbnail img-max img-active';
+            if (index === this.state.actual) {                   
+                classNames = 'img-thumbnail img-line border border-primary';
             } else {
-                classNames = 'img-thumbnail img-max'                
+                classNames = 'img-thumbnail img-line'                
             }    
             const src = process.env.PUBLIC_URL + `/img/numImg_${e}.jpg`;                                    
-            return <img src={src} alt={e} className={classNames}></img> 
+            return <img src={src} alt={e} className={classNames} key={index}></img> 
                         
         })
         return <div className="d-inline-block">{data}</div>
@@ -87,7 +88,7 @@ export default class ImageCode extends Component {
                 let hint
                 if (this.props.type === 'num') {
                     const src = process.env.PUBLIC_URL + `/img/numImg_${val}.jpg`;
-                    hint =  <img src={src} alt={val} className="img-thumbnail img-max"></img>            
+                    hint =  <img src={src} alt={val} className="img-hint"></img>            
                 } else {
                     hint = <div className="grey hint">{val}</div>
                 }

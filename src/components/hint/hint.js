@@ -1,6 +1,7 @@
 import React, {
     Component
   } from 'react';
+import './hint.css'
 
 export default class Hint extends Component {       
 

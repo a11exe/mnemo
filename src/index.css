@@ -22,12 +22,3 @@ code {
 .num{
   font-size: 60px;
 }
-
-.img-max {
-  max-width: 50px;
-  width:25%;
-}
-
-.img-active {
-  border-color: black
-}
